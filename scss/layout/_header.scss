@@ -1,0 +1,15 @@
+l-header {
+    grid-area: header;
+    width: 100vw;
+    padding: 14px 16px 40px 16px;
+
+    &__btn {
+        text-align: right;
+    }
+    p {
+        margin: 0 70px;
+    }
+    form {
+        margin-top: 38px;
+    }
+}
