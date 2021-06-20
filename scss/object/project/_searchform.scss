@@ -1,0 +1,25 @@
+/* -------------------------------------
+header
+---------------------------------------- */
+.p-searchform {
+    display: inline-block;
+    font-size: 1.6rem;
+    font-weight: bold;
+    line-height: calc(23px-1.6rem);
+    font-family: serif;
+    color: #707070;
+    font-family: "M PLUS 1p", sans-serif;
+
+    &__keyword {
+        padding: 12px 23px;
+        border: 1px solid #707070;
+        border-radius: 10px;
+    }
+
+    &__submit {
+        padding: 12px 23px;
+        border: 1px solid #707070;
+        border-radius: 10px;
+        background-color: rgb(242, 237, 233);
+    }
+}

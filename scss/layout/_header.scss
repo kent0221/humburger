@@ -1,7 +1,9 @@
 l-header {
     grid-area: header;
     width: 100vw;
+    height: auto;
     padding: 14px 16px 40px 16px;
+    border: 2px solid #111; //範囲の確認用(後で消す)
 
     &__btn {
         text-align: right;
