@@ -1,0 +1,44 @@
+.p-content {
+    &__takeout {
+        background: url(/img/eyecatch/front_tekeout.jpg) center center no-repeat;
+        background-size: cover;
+        height: 642px;
+    }
+
+    &__eatin {
+        margin-top: 20px;
+        background: url(/img/eyecatch/front_eatin.jpg) center center no-repeat;
+        background-size: cover;
+        height: 642px;
+    }
+
+    &__ttl {
+        grid-column: 1/2;
+        grid-row: 1/2;
+        font-size: 4.1rem;
+        font-weight: bold;
+        line-height: calc(58 / 41);
+        color: $color__main-ttl;
+        position: relative;
+
+        &::before {
+            display: inline-block;
+            content: "";
+            width: 35px;
+            height: 3px;
+            background-color: $color__main-ttl;
+            position: absolute;
+            top: 15%;
+        }
+    }
+
+    &__desc01 {
+        grid-column: 1/2;
+        grid-row: 2/3;
+    }
+
+    &__desc02 {
+        grid-column: 1/2;
+        grid-row: 4/5;
+    }
+}

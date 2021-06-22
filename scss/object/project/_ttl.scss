@@ -2,10 +2,10 @@
 header
 ---------------------------------------- */
 .p-ttl {
-    display: block;
+    display: inline-block;
     font-size: 4rem;
     font-weight: bold;
-    line-height: calc(53px-4rem);
-    font-family: "Roboto", sans-serif;
-    color: #707070;
+    line-height: calc(53 / 40);
+    font-family: $roboto;
+    color: $color__header-ttl;
 }

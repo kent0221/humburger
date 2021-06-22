@@ -1,0 +1,13 @@
+/*-- front --*/
+.c-ttl {
+    position: absolute;
+    top: 40%;
+    left: 5%;
+
+    &__hero {
+        font-family: $m-plus;
+        font-weight: bold;
+        font-size: 3.6rem;
+        line-height: calc(54 / 36);
+    }
+}

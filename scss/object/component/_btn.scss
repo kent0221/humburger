@@ -2,10 +2,10 @@
 header
 ---------------------------------------- */
 .c-btn__menu {
-    display: block;
+    display: inline-block;
     font-size: 2rem;
     font-weight: bold;
-    line-height: calc(26px-2rem);
-    font-family: "Roboto", sans-serif;
-    color: #707070;
+    line-height: calc(26 / 20);
+    font-family: $roboto;
+    color: $color__header-txt;
 }

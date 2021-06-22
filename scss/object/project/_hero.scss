@@ -1,0 +1,13 @@
+/*-- front --*/
+.p-hero {
+    position: relative;
+    img {
+        height: 100%;
+        width: auto;
+        object-fit: cover;
+        text-align: center;
+    }
+    h2 {
+        color: $color__main-ttl;
+    }
+}

@@ -1,4 +1,23 @@
-l-footer {
+.l-footer {
+    display: block;
     grid-area: footer;
+    max-width: 1000px;
     width: 100vw;
+    height: auto;
+    background-color: $color__footer-bg;
+    color: $color__footer-txt;
+    font-family: $m-plus;
+    padding: 40px 60px 30px;
+    text-align: center;
+
+    &__info {
+        font-size: 2rem;
+        line-height: calc(29 / 20);
+    }
+
+    &__copyright {
+        margin-top: 34px;
+        font-size: 1.4rem;
+        line-height: calc(20 / 14);
+    }
 }

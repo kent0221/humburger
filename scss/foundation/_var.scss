@@ -1,0 +1,42 @@
+/* -------------------------------------
+配色
+---------------------------------------- */
+/*-- 定義 --*/
+$white: #fff;
+$white__light: rgb(255, 255, 255, 0.8);
+$gray__light: rgb(0, 0, 0, 50%);
+$gray: rgb(112, 112, 112);
+$darkBrown: rgb(60, 43, 28);
+$brown: rgb(157, 134, 112);
+$pink: rgb(222, 216, 211);
+$pinkLight: rgb(255, 247, 239);
+$pinkDark: rgb(242, 237, 233);
+
+/*-- header --*/
+$color__header-bg: $pinkLight;
+$color__header-ttl: $gray;
+$color__header-txt: $gray;
+$color__header-border: $gray;
+$color__header-submit-01: $pink;
+$color__header-submit-02: $pinkLight;
+
+/*-- main --*/
+$color__main-bg: $white;
+$color__main-ttl: $white;
+$color__main-txt: $white;
+$subcolor__main-ttl: $darkBrown;
+$subcolor__main-txt: $darkBrown;
+$subcolor__main-bg: $white__light;
+$color__main-submit: $white;
+
+/*-- sidebar --*/
+
+/*-- footer --*/
+$color__footer-bg: $brown;
+$color__footer-txt: $white;
+
+/* -------------------------------------
+フォント
+---------------------------------------- */
+$roboto: "Roboto", sans-serif;
+$m-plus: "M PLUS 1p", sans-serif;
