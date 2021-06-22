@@ -348,6 +348,30 @@ progress {
 /* -------------------------------------
 layout
 ---------------------------------------- */
+.l-grid {
+  display: grid;
+  grid-gap: 0;
+  grid-template-columns: 100vw 100vw;
+  grid-template-rows: auto auto 150px;
+  grid-template-areas: "header sidebar" "main sidebar" "footer sidebar";
+  overflow: hidden;
+}
+.l-grid__fixed.is-open {
+  /*-- サイドバー開いた時にスクロールさせない --*/
+  position: fixed;
+  overflow-y: auto;
+}
+.l-grid__fixed.is-open::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  z-index: 80;
+  background-color: rgba(0, 0, 0, 0.4);
+}
+
 .l-header {
   grid-area: header;
   width: 100vw;
@@ -355,7 +379,7 @@ layout
   padding: 40px 0;
   background-color: #fff7ef;
 }
-.l-header p {
+.l-header__ttl {
   margin: 0 70px;
   text-align: center;
 }
@@ -381,17 +405,40 @@ layout
   height: auto;
   padding: 20px;
 }
+.l-main__main {
+  width: 100%;
+}
 
-l-sidebar {
-  width: 100vw;
-  overflow-x: hidden;
+.l-sidebar {
   position: absolute;
+  grid-row: 1/4;
+  grid-column: 1/2;
   top: 0;
-  left: 100vw;
+  right: 0;
+  left: 10%;
+  bottom: 0;
   z-index: 100;
+  height: 2732px;
+  width: calc(100vw - 10%);
+  background-color: #f2ede9;
+  position: relative;
+  /*-- Menu押す前は非表示設定 Menu押された時の挙動はjQueryにて記載 --*/
+  display: none;
+}
+.l-sidebar__btn {
+  position: absolute;
+  top: 25px;
+  right: 17px;
+  width: 32px;
+  height: 32px;
+  z-index: 110;
+}
+.l-sidebar__gmenu {
+  margin: 210px 46px auto;
 }
 
 .l-footer {
+  grid-area: footer;
   display: block;
   grid-area: footer;
   max-width: 1000px;
@@ -426,6 +473,7 @@ object: component
 /* -------------------------------------
 header
 ---------------------------------------- */
+/*-- Menuボタン --*/
 .c-btn__menu {
   display: inline-block;
   font-size: 2rem;
@@ -433,6 +481,28 @@ header
   line-height: calc(26 / 20);
   font-family: "Roboto", sans-serif;
   color: #707070;
+}
+
+/* -------------------------------------
+sidebar
+---------------------------------------- */
+/*-- closeボタン --*/
+.c-btn__close span {
+  display: inline-block;
+  width: 36px;
+  height: 3px;
+  background-color: #707070;
+  position: relative;
+}
+.c-btn__close span:first-child {
+  position: absolute;
+  top: 5px;
+  transform: rotate(-45deg);
+}
+.c-btn__close span:last-child {
+  position: absolute;
+  top: 5px;
+  transform: rotate(45deg);
 }
 
 /*-- front --*/
@@ -463,6 +533,17 @@ header
   font-size: 1.6rem;
   font-family: "M PLUS 1p", sans-serif;
   line-height: calc(23 / 16);
+}
+
+.c-menu {
+  margin-top: 40px;
+  margin-left: 20px;
+}
+.c-menu__item {
+  margin-bottom: 23px;
+}
+.c-menu__item:last-child {
+  margin-bottom: 43px;
 }
 
 /* -------------------------------------
@@ -497,20 +578,7 @@ header
   font-family: serif;
   color: #707070;
   font-family: "M PLUS 1p", sans-serif;
-  position: relative;
-  /*-- 虫眼鏡 --*/
-}
-.p-searchform::before {
-  display: inline-block;
-  font-family: "Font Awesome 5 Free";
-  font-weight: 900;
-  content: "";
-  font-size: 2rem;
-  width: 20px;
-  height: 20px;
-  position: absolute;
-  top: 25%;
-  left: 10%;
+  /*-- 虫眼鏡: inputタグ内に入れたらうまくいった --*/
 }
 .p-searchform__keyword {
   grid-area: search;
@@ -520,6 +588,7 @@ header
   border: 1px solid #707070;
   border-radius: 10px;
   background-color: #fff;
+  position: relative;
 }
 .p-searchform__submit {
   grid-area: submit;
@@ -569,14 +638,13 @@ header
   color: #fff;
   position: relative;
 }
-.p-content__ttl::before {
+.p-content__ttl span {
+  position: absolute;
+  top: 60px;
   display: inline-block;
-  content: "";
-  width: 35px;
+  width: 34px;
   height: 3px;
   background-color: #fff;
-  position: absolute;
-  top: 15%;
 }
 .p-content__desc01 {
   grid-column: 1/2;
@@ -585,6 +653,77 @@ header
 .p-content__desc02 {
   grid-column: 1/2;
   grid-row: 4/5;
+}
+
+.p-map {
+  position: relative;
+  width: 100%;
+  height: 691px;
+  overflow: hidden;
+  /*-- マップ画像を暗くする --*/
+}
+.p-map iframe {
+  position: absolute;
+  left: -300px;
+  -o-object-fit: cover;
+     object-fit: cover;
+}
+.p-map__layer {
+  background-color: rgba(0, 0, 0, 0.4);
+  position: absolute;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  z-index: 10;
+}
+.p-map__layer::after {
+  content: "";
+  background-color: rgba(0, 0, 0, 0.4);
+  position: absolute;
+  top: 0;
+  right: 0;
+  left: 0;
+  height: 415px;
+}
+.p-map__info {
+  position: absolute;
+  z-index: 20;
+  padding: 40px;
+}
+.p-map__info span {
+  display: inline-block;
+  margin: 20px 0;
+  width: 75px;
+  height: 2px;
+  background-color: #fff;
+}
+.p-map__ttl {
+  font-size: 3rem;
+  font-weight: bold;
+  line-height: calc(45 / 30);
+  color: #fff;
+}
+.p-map__desc {
+  height: auto;
+  font-family: "M PLUS 1p", sans-serif;
+  font-size: 1.4rem;
+  line-height: calc(33 / 14);
+  color: #fff;
+}
+
+.p-gmenu__item > a {
+  font-family: "M PLUS 1p", sans-serif;
+  font-size: 2.4rem;
+  font-weight: bold;
+  line-height: calc(36 / 24);
+  color: #707070;
+}
+.p-gmenu .c-menu__item > a {
+  font-family: "M PLUS 1p", sans-serif;
+  font-size: 2rem;
+  line-height: calc(29 / 20);
+  color: #707070;
 }
 
 /* -------------------------------------

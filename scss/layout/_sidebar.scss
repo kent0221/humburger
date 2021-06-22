@@ -1,8 +1,31 @@
-l-sidebar {
-    width: 100vw;
-    overflow-x: hidden;
+.l-sidebar {
+    // grid-area: sidebar;
     position: absolute;
+    grid-row: 1/4;
+    grid-column: 1/2;
     top: 0;
-    left: 100vw;
+    right: 0;
+    left: 10%;
+    bottom: 0;
     z-index: 100;
+    height: 2732px;
+    width: calc(100vw - 10%);
+    background-color: $color__sidebar-bg;
+    position: relative;
+
+    /*-- Menu押す前は非表示設定 Menu押された時の挙動はjQueryにて記載 --*/
+    display: none;
+
+    &__btn {
+        position: absolute;
+        top: 25px;
+        right: 17px;
+        width: 32px;
+        height: 32px;
+        z-index: 110;
+    }
+
+    &__gmenu {
+        margin: 210px 46px auto;
+    }
 }

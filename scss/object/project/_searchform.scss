@@ -16,22 +16,9 @@ header
     font-family: serif;
     color: $color__header-txt;
     font-family: $m-plus;
-    position: relative;
+    // position: relative;
 
-    /*-- 虫眼鏡 --*/
-
-    &::before {
-        display: inline-block;
-        font-family: "Font Awesome 5 Free";
-        font-weight: 900;
-        content: "\f002";
-        font-size: 2rem;
-        width: 20px;
-        height: 20px;
-        position: absolute;
-        top: 25%;
-        left: 10%;
-    }
+    /*-- 虫眼鏡: inputタグ内に入れたらうまくいった --*/
 
     &__keyword {
         grid-area: search;
@@ -41,6 +28,8 @@ header
         border: 1px solid $color__header-border;
         border-radius: 10px;
         background-color: #fff;
+
+        position: relative;
     }
 
     &__submit {

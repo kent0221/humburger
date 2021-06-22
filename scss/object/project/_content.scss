@@ -21,14 +21,13 @@
         color: $color__main-ttl;
         position: relative;
 
-        &::before {
-            display: inline-block;
-            content: "";
-            width: 35px;
-            height: 3px;
-            background-color: $color__main-ttl;
+        span {
             position: absolute;
-            top: 15%;
+            top: 60px;
+            display: inline-block;
+            width: 34px;
+            height: 3px;
+            background-color: $color__main-txt;
         }
     }
 

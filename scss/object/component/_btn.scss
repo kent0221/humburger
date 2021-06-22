@@ -1,6 +1,7 @@
 /* -------------------------------------
 header
 ---------------------------------------- */
+/*-- Menuボタン --*/
 .c-btn__menu {
     display: inline-block;
     font-size: 2rem;
@@ -8,4 +9,29 @@ header
     line-height: calc(26 / 20);
     font-family: $roboto;
     color: $color__header-txt;
+}
+
+/* -------------------------------------
+sidebar
+---------------------------------------- */
+/*-- closeボタン --*/
+.c-btn__close {
+    span {
+        display: inline-block;
+        width: 36px;
+        height: 3px;
+        background-color: $color__sidebar-txt;
+        position: relative;
+
+        &:first-child {
+            position: absolute;
+            top: 5px;
+            transform: rotate(-45deg);
+        }
+        &:last-child {
+            position: absolute;
+            top: 5px;
+            transform: rotate(45deg);
+        }
+    }
 }

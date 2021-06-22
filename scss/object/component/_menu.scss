@@ -1,0 +1,12 @@
+.c-menu {
+    margin-top: 40px;
+    margin-left: 20px;
+
+    &__item {
+        margin-bottom: 23px;
+
+        &:last-child {
+            margin-bottom: 43px;
+        }
+    }
+}
