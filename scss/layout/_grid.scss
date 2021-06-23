@@ -15,20 +15,4 @@
         "main sidebar"
         "footer sidebar";
     overflow: hidden;
-
-    &__fixed.is-open {
-        /*-- サイドバー開いた時にスクロールさせない --*/
-        position: fixed;
-        overflow-y: auto;
-        &::before {
-            content: "";
-            position: absolute;
-            top: 0;
-            left: 0;
-            right: 0;
-            bottom: 0;
-            z-index: 80;
-            background-color: rgb(0, 0, 0, 0.4);
-        }
-    }
 }
