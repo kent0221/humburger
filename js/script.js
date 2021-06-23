@@ -4,7 +4,7 @@
 $(function () {
     $('.c-btn__menu').click(function () {
         $('.l-sidebar').toggleClass('is-open');
-        $('.l-sidebar').fadeIn(500);
+        $('.l-sidebar').fadeIn(200);
     });
 });
 
@@ -12,7 +12,7 @@ $(function () {
 $(function () {
     $('.c-btn__close').click(function () {
         $('.l-sidebar').toggleClass('is-open');
-        $('.l-sidebar').fadeOut(500);
+        $('.l-sidebar').fadeOut(200);
     });
 
 });

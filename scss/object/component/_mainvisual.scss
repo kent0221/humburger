@@ -1,0 +1,34 @@
+.c-mainvisual {
+    &__front {
+        background-image: url(/img/mainvisual/mainvisual-pc.jpg);
+        background-repeat: no-repeat;
+        background-position: center;
+        background-size: cover;
+    }
+
+    &__single {
+        background-image: url(/img/mainvisual/mainvisual_sigle.jpg);
+        background-repeat: no-repeat;
+        background-position: center;
+        background-size: cover;
+    }
+
+    &__archive {
+        background-image: url(/img/mainvisual/page-title_arcive.jpg);
+        background-repeat: no-repeat;
+        background-position: left center;
+        background-size: cover;
+        position: relative;
+        z-index: -20;
+
+        &::before {
+            position: absolute;
+            content: "";
+            width: 100%;
+            height: 100%;
+            background-color: $black;
+            opacity: 0.2;
+            z-index: -10;
+        }
+    }
+}

@@ -1,13 +1,25 @@
 /*-- front --*/
 .c-ttl {
-    position: absolute;
-    top: 40%;
-    left: 5%;
-
     &__hero {
         font-family: $m-plus;
         font-weight: bold;
         font-size: 3.6rem;
         line-height: calc(54 / 36);
+
+        &-sub {
+            display: block;
+            font-size: 1.6rem;
+            line-height: calc(23 / 16);
+        }
     }
+}
+
+/*-- sigle --*/
+.c-ttl__sub {
+    font-family: $m-plus;
+    font-size: 2rem;
+    font-weight: bold;
+    line-height: calc(29 / 20);
+    color: $subcolor__main-ttl;
+    margin-bottom: 30px;
 }

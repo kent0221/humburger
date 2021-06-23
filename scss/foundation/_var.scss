@@ -11,6 +11,7 @@ $brown: rgb(157, 134, 112);
 $pink: rgb(222, 216, 211);
 $pinkLight: rgb(255, 247, 239);
 $pinkDark: rgb(242, 237, 233);
+$black: rgb(0, 0, 0);
 
 /*-- header --*/
 $color__header-bg: $pinkLight;
@@ -24,10 +25,12 @@ $color__header-submit-02: $pinkLight;
 $color__main-bg: $white;
 $color__main-ttl: $white;
 $color__main-txt: $white;
+$color__main-submit: $white;
+$subcolor__main-bg: $white__light;
 $subcolor__main-ttl: $darkBrown;
 $subcolor__main-txt: $darkBrown;
-$subcolor__main-bg: $white__light;
-$color__main-submit: $white;
+$AccColor__main-bg: $darkBrown;
+$AccColor__main-txt: $gray;
 
 /*-- sidebar --*/
 $color__sidebar-bg: $pinkDark;

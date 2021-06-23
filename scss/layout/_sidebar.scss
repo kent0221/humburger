@@ -15,6 +15,11 @@
 
     /*-- Menu押す前は非表示設定 Menu押された時の挙動はjQueryにて記載 --*/
     display: none;
+    &.is-open {
+        position: fixed;
+        height: 100%;
+        overflow-y: scroll;
+    }
 
     &__btn {
         position: absolute;

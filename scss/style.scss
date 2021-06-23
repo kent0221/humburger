@@ -25,6 +25,8 @@ object: component
 @import "./object/component/ttl";
 @import "./object/component/content";
 @import "./object/component/menu";
+@import "./object/component/mainvisual";
+@import "./object/component/card";
 
 /* -------------------------------------
 object: project
@@ -36,6 +38,9 @@ object: project
 @import "./object/project/content";
 @import "./object/project/map";
 @import "./object/project/gmenu";
+@import "./object/project/post";
+@import "./object/project/pagenation";
+@import "./object/project/blockquote";
 
 /* -------------------------------------
 object: utility

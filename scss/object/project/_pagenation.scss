@@ -1,0 +1,29 @@
+.p-pagenation {
+    margin: 40px 0 30px;
+    display: flex;
+    justify-content: space-between;
+
+    a {
+        display: inline-block;
+        font-family: $m-plus;
+        font-size: 1.6rem;
+        line-height: calc(23 / 16);
+        color: $AccColor__main-txt;
+    }
+
+    &__prev::before {
+        font-family: "Font Awesome 5 Free";
+        font-weight: 900;
+        content: "\f100";
+        padding-right: 5px;
+        font-size: 1.6rem;
+    }
+
+    &__next::after {
+        font-family: "Font Awesome 5 Free";
+        font-weight: 900;
+        content: "\f101";
+        padding-left: 5px;
+        font-size: 1.6rem;
+    }
+}
