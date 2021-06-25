@@ -1,26 +1,38 @@
 .p-post {
+    width: 100%;
+    height: auto;
+    padding: 20px;
+
+    @include tab {
+        padding: 35px;
+    }
+
+    &__page,
+    &__single {
+        width: 100%;
+        height: auto;
+        padding: 20px;
+
+        @include tab {
+            padding: 60px;
+        }
+    }
+
     &__ttl {
-        font-size: 2.8rem;
-        font-weight: bold;
-        line-height: calc(42 / 28);
         color: $subcolor__main-ttl;
         margin: 10px 0 30px;
+        @include font($size: 2.8rem, $weight: bold);
     }
 
     &__desc {
-        height: auto;
-        font-family: $m-plus;
-        font-size: 1.6rem;
-        line-height: calc(23 / 16);
-        color: $subcolor__main-txt;
         margin-bottom: 20px;
+        height: auto;
+        color: $subcolor__main-txt;
+        @include font();
     }
 
     &__subttl {
-        font-family: $m-plus;
-        font-size: 2.4rem;
-        font-weight: bold;
-        line-height: calc(36 / 24);
         margin: 34px 0 30px;
+        @include font($size: 2.4rem, $weight: bold);
     }
 }

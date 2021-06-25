@@ -1,0 +1,22 @@
+.p-grid {
+    max-width: 100%;
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-template-rows: repeat(9, auto);
+    grid-gap: 20px;
+
+    @include tab {
+        grid-template-columns: repeat(2, 1fr);
+        grid-template-rows: repeat(5, auto);
+    }
+
+    @include pc {
+        grid-template-columns: repeat(3, 1fr);
+        grid-template-rows: repeat(3 auto);
+    }
+
+    img {
+        max-width: 100%;
+        object-fit: cover;
+    }
+}

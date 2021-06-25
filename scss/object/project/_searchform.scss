@@ -1,29 +1,23 @@
-/* -------------------------------------
-header
----------------------------------------- */
 .p-searchform {
     display: inline-block;
     display: grid;
-    grid-template-columns: auto auto;
+    grid-template-columns: 55% 20%;
     grid-template-rows: 1fr;
     grid-template-areas: "search submit";
-    gap: 14px;
+    gap: 15px;
     justify-content: center;
     margin: 0 auto;
-
-    font-size: 1.6rem;
-    font-weight: bold;
-    font-family: serif;
     color: $color__header-txt;
-    font-family: $m-plus;
-    // position: relative;
+    @include font($family: serif, $weight: bold);
 
-    /*-- 虫眼鏡: inputタグ内に入れたらうまくいった --*/
+    @include pc-l {
+        grid-template-columns: 450px 120px;
+        grid-template-rows: 46px;
+    }
 
     &__keyword {
         grid-area: search;
         display: inline-block;
-        width: 230px;
         padding: 12px 23px;
         border: 1px solid $color__header-border;
         border-radius: 10px;
@@ -35,7 +29,6 @@ header
     &__submit {
         grid-area: submit;
         display: inline-block;
-        width: 78px;
         padding: 12px 23px;
         border-radius: 10px;
     }

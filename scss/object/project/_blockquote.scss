@@ -1,5 +1,6 @@
 .p-blockquote {
     background-color: rgb(245, 245, 245);
+    margin-bottom: 30px;
 
     &__wrap {
         padding: 30px 20px;
@@ -7,10 +8,8 @@
 
     p,
     a {
-        font-family: $m-plus;
-        font-size: 1.6rem;
-        line-height: calc(23 / 16);
         color: $subcolor__main-txt;
+        @include font();
     }
 
     &__txt {

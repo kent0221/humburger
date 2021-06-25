@@ -1,0 +1,12 @@
+.p-btn {
+    margin-right: auto;
+    input {
+        max-width: 430px;
+        width: 100%;
+        height: 80px;
+        border-radius: 20px;
+        margin-bottom: 30px;
+        color: $subcolor__main-txt;
+        @include font();
+    }
+}

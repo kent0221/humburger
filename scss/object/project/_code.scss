@@ -1,0 +1,11 @@
+.p-code {
+    background-color: rgb(245, 245, 245);
+
+    &__wrap {
+        padding: 50px 0 50px 50px;
+    }
+    code {
+        color: $subcolor__main-txt;
+        @include font();
+    }
+}

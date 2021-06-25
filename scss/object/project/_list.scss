@@ -1,0 +1,20 @@
+.p-list {
+    margin: 30px 0 30px 20px;
+
+    li {
+        color: $subcolor__main-txt;
+        @include font();
+    }
+
+    &__ol {
+        margin-bottom: 60px;
+        li {
+            list-style-type: decimal;
+        }
+    }
+
+    &__ol-child,
+    &__ul-child {
+        margin: 20px 0 20px 18px;
+    }
+}

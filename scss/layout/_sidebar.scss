@@ -1,20 +1,22 @@
 .l-sidebar {
-    // grid-area: sidebar;
     position: absolute;
-    grid-row: 1/4;
-    grid-column: 1/2;
     top: 0;
     right: 0;
-    left: 10%;
     bottom: 0;
     z-index: 100;
     height: 2732px;
-    width: calc(100vw - 10%);
+    width: 370px;
     background-color: $color__sidebar-bg;
     position: relative;
-
-    /*-- Menu押す前は非表示設定 Menu押された時の挙動はjQueryにて記載 --*/
+    grid-area: sidebar;
     display: none;
+
+    @include pc {
+        display: block;
+        height: auto;
+        overflow: hidden;
+    }
+
     &.is-open {
         position: fixed;
         height: 100%;
@@ -28,9 +30,25 @@
         width: 32px;
         height: 32px;
         z-index: 110;
+
+        @include pc {
+            display: none;
+        }
     }
 
     &__gmenu {
         margin: 210px 46px auto;
+    }
+
+    &__ttl {
+        display: none;
+
+        @include pc {
+            display: block;
+            position: absolute;
+            top: 80px;
+            right: 240px;
+            z-index: 200;
+        }
     }
 }

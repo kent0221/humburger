@@ -1,29 +1,52 @@
 .p-pagenation {
-    margin: 40px 0 30px;
-    display: flex;
-    justify-content: space-between;
-
+    li,
     a {
         display: inline-block;
-        font-family: $m-plus;
-        font-size: 1.6rem;
-        line-height: calc(23 / 16);
         color: $AccColor__main-txt;
+        @include font();
     }
 
     &__prev::before {
-        font-family: "Font Awesome 5 Free";
-        font-weight: 900;
-        content: "\f100";
-        padding-right: 5px;
+        content: "<<";
+        padding-right: 10px;
         font-size: 1.6rem;
     }
 
     &__next::after {
-        font-family: "Font Awesome 5 Free";
-        font-weight: 900;
-        content: "\f101";
-        padding-left: 5px;
+        content: ">>";
+        padding-left: 10px;
         font-size: 1.6rem;
+    }
+
+    &.mobile {
+        @include tab {
+            display: none;
+        }
+    }
+
+    &.tab {
+        display: none;
+        @include tab {
+            display: flex;
+        }
+
+        li,
+        a {
+            @include font($family: $roboto, $weight: bold, $height: 2);
+        }
+    }
+    &__count {
+        padding-right: 7px;
+    }
+
+    &__num {
+        margin: 0 7px;
+        padding: 0 10px;
+        border: 1px solid $AccColor__main-txt;
+
+        &.current {
+            background-color: $AccColor__main-bg;
+            color: $color__main-txt;
+        }
     }
 }

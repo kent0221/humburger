@@ -1,18 +1,32 @@
 .l-grid {
     display: grid;
     grid-gap: 0;
-    // grid-template-columns: 100vw;
-    // grid-template-rows: auto auto 150px;
-    // grid-template-areas:
-    //     "header"
-    //     "main"
-    //     "footer";
-
-    grid-template-columns: 100vw 100vw;
+    grid-template-columns: 100vw 370px;
     grid-template-rows: auto auto 150px;
     grid-template-areas:
         "header sidebar"
         "main sidebar"
         "footer sidebar";
     overflow: hidden;
+
+    &.is-open::before {
+        content: "";
+        position: absolute;
+        z-index: 10;
+        display: block;
+        width: 100vw;
+        height: 200vw;
+        background-color: rgb(0, 0, 0, 0.4);
+    }
+
+    @include pc {
+        width: 100vw;
+        grid-template-columns: auto 370px;
+        grid-template-areas:
+            "header sidebar"
+            "main sidebar"
+            "footer footer";
+
+        overflow: visible;
+    }
 }

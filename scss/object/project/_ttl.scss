@@ -3,9 +3,11 @@ header
 ---------------------------------------- */
 .p-ttl {
     display: inline-block;
-    font-size: 4rem;
-    font-weight: bold;
-    line-height: calc(53 / 40);
-    font-family: $roboto;
     color: $color__header-ttl;
+    @include font($family: $roboto, $size: 4rem, $weight: bold, $height: 1.3);
+
+    &__sidebar {
+        color: $color__sidebar-ttl;
+        @include font($family: $roboto, $size: 3.4rem, $weight: bold, $height: 1.3);
+    }
 }

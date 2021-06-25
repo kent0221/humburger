@@ -1,0 +1,25 @@
+.p-table {
+    width: 100%;
+    height: auto;
+    border-collapse: collapse;
+    margin: 30px 0;
+
+    th,
+    td {
+        margin-top: 30px;
+        padding-left: 30px;
+        height: 70px;
+        @include font();
+        color: $subcolor__main-txt;
+        text-align: left;
+        vertical-align: middle;
+        border: 1px solid $subcolor__main-txt;
+    }
+
+    &__left {
+        width: 40%;
+    }
+    &__right {
+        width: 60%;
+    }
+}

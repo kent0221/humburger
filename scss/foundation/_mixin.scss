@@ -1,9 +1,36 @@
 /* -------------------------------------
-レスポンシブ：モバイルファースト(境界：600px)
+レスポンシブ(モバイルファースト)
+スマホ：~599px
+タブレット：600px ~ 959px
+PC：960px ~
 ---------------------------------------- */
-$sp: 600px;
-@mixin pc {
-    @media (min-width: ($sp)) {
+$tab: 600px;
+$pc: 960px;
+$pc-l: 1300px;
+
+@mixin tab {
+    @media (min-width: ($tab)) {
         @content;
     }
+}
+@mixin pc {
+    @media (min-width: ($pc)) {
+        @content;
+    }
+}
+/*-- マップの大きさ対策 --*/
+@mixin pc-l {
+    @media (min-width: ($pc-l)) {
+        @content;
+    }
+}
+
+/* -------------------------------------
+フォント
+---------------------------------------- */
+@mixin font($family: $m-plus, $size: 1.6rem, $weight: normal, $height: 1.5) {
+    font-family: $family;
+    font-size: $size;
+    font-weight: $weight;
+    line-height: $height;
 }
