@@ -8,6 +8,10 @@
         height: 415px;
     }
 
+    @include pc {
+        height: 650px;
+    }
+
     iframe {
         position: absolute;
         overflow: hidden;
@@ -21,7 +25,7 @@
             zoom: 2;
         }
 
-        @include pc-l {
+        @include pc {
             top: -150%;
             left: -70%;
             zoom: 3;
@@ -47,6 +51,10 @@
             left: 0;
             height: 415px;
             max-width: 960px;
+
+            @include pc {
+                height: 650px;
+            }
         }
     }
 
@@ -55,6 +63,15 @@
         z-index: 20;
         padding: 40px;
         max-width: 960px;
+
+        @include tab {
+            padding-right: 20px;
+        }
+
+        @include pc {
+            padding: 80px 130px 40px 120px;
+            height: 650px;
+        }
 
         span {
             display: inline-block;

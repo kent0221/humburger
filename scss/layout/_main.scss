@@ -30,8 +30,17 @@
         }
     }
 
-    &__maap {
+    &__map {
         width: 100%;
+        height: 691px;
+
+        @include tab {
+            height: 415px;
+        }
+
+        @include pc {
+            height: 650px;
+        }
     }
 
     &__pagenation {
