@@ -6,6 +6,10 @@ header
     color: $color__header-ttl;
     @include font($family: $roboto, $size: 4rem, $weight: bold, $height: 1.3);
 
+    @include pc-l {
+        @include font($family: $roboto, $size: 6.5rem, $weight: bold, $height: 1.3);
+    }
+
     &__sidebar {
         color: $color__sidebar-ttl;
         @include font($family: $roboto, $size: 3.4rem, $weight: bold, $height: 1.3);

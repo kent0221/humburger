@@ -1,12 +1,15 @@
 /* -------------------------------------
 レスポンシブ(モバイルファースト)
-スマホ：~599px
-タブレット：600px ~ 959px
-PC：960px ~
+スマホ：~649px
+タブレット：650px ~ 959px
+PC：1000px ~1299px
+PC-m：1300px ~1499px
+PC-l：1500px ~
 ---------------------------------------- */
-$tab: 600px;
-$pc: 960px;
-$pc-l: 1300px;
+$tab: 650px;
+$pc: 1000px;
+$pc-m: 1300px;
+$pc-l: 1500px;
 
 @mixin tab {
     @media (min-width: ($tab)) {
@@ -18,7 +21,13 @@ $pc-l: 1300px;
         @content;
     }
 }
-/*-- マップの大きさ対策 --*/
+/*-- マップの大きさ対策 元々pc-l--*/
+@mixin pc-m {
+    @media (min-width: ($pc-m)) {
+        @content;
+    }
+}
+
 @mixin pc-l {
     @media (min-width: ($pc-l)) {
         @content;

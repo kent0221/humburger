@@ -8,7 +8,7 @@ header
     @include font($family: $roboto, $size: 2rem, $weight: bold, $height: 1.3);
 
     @include tab {
-        @include font($size: 3.4rem);
+        @include font($family: $roboto, $size: 3.4rem, $weight: bold, $height: 1.3);
     }
 }
 
@@ -45,8 +45,10 @@ archive
         display: inline-block;
         padding: 10px 40px;
         border-radius: 30px;
-        background-color: $color__main-submit;
-        color: $AccColor__main-txt;
-        @include font($height: 1.1, $weight: bold);
+
+        @include pc-l {
+            padding: 27px 104px;
+            border-radius: 50px;
+        }
     }
 }

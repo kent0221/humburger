@@ -1,8 +1,8 @@
 .p-searchform {
     display: inline-block;
     display: grid;
-    grid-template-columns: 55% 20%;
-    grid-template-rows: 1fr;
+    grid-template-columns: 60% 20%;
+    grid-template-rows: 46px;
     grid-template-areas: "search submit";
     gap: 15px;
     justify-content: center;
@@ -10,9 +10,12 @@
     color: $color__header-txt;
     @include font($family: serif, $weight: bold);
 
-    @include pc-l {
+    @include tab {
+        grid-template-columns: 50% 16%;
+    }
+
+    @include pc-m {
         grid-template-columns: 450px 120px;
-        grid-template-rows: 46px;
     }
 
     &__keyword {
@@ -31,5 +34,6 @@
         display: inline-block;
         padding: 12px 23px;
         border-radius: 10px;
+        @include font($weight: bold);
     }
 }

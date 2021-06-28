@@ -1,13 +1,48 @@
 .c-content {
-    background-color: $subcolor__main-bg;
     padding: 10px;
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-template-rows: 50% auto 10px auto;
 
-    &__ttl {
-        margin: 10px 0 20px;
-        @include font($size: 2.2rem, $weight: bold, $height: 1.5);
+    @include pc-l {
+        padding: 20px;
+        grid-template-rows: auto 15% 20px 15%;
     }
 
-    &-desc {
-        @include font();
+    &__ttl {
+        grid-column: 1/2;
+        grid-row: 1/2;
+        position: relative;
+
+        span {
+            position: absolute;
+            top: 70px;
+            display: inline-block;
+            width: 34px;
+            height: 4px;
+
+            @include pc-l {
+                top: 130px;
+                left: 5px;
+                width: 63px;
+                height: 4px;
+            }
+        }
+    }
+
+    &__topic01 {
+        padding: 10px;
+        grid-column: 1/2;
+        grid-row: 2/3;
+    }
+
+    &__topic02 {
+        padding: 10px;
+        grid-column: 1/2;
+        grid-row: 4/5;
+    }
+
+    &__subTtl {
+        margin: 10px 0 20px;
     }
 }

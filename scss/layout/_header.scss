@@ -4,8 +4,9 @@
     padding: 40px 0;
     background-color: $color__header-bg;
 
-    @include pc-l {
-        padding: 60px 30px 60px 60px;
+    @include pc-m {
+        padding-left: 60px;
+        padding-right: 30px;
         display: grid;
         grid-template-columns: auto auto;
         grid-template-rows: auto;
@@ -17,7 +18,7 @@
         margin-bottom: 40px;
         text-align: center;
 
-        @include pc-l {
+        @include pc-m {
             margin: 0;
         }
     }
@@ -26,6 +27,10 @@
         position: absolute;
         top: 16px;
         right: 14px;
+
+        @include tab {
+            right: 26px;
+        }
 
         @include pc {
             display: none;

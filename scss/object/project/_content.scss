@@ -1,45 +1,68 @@
 .p-content {
-    &__takeout {
+    &--takeout {
         background: url(/img/eyecatch/front_tekeout.jpg) center center no-repeat;
         background-size: cover;
         height: 642px;
+        width: 100%;
+
+        @include pc-l {
+            height: 1200px;
+        }
     }
 
-    &__eatin {
+    &--eatin {
         margin-top: 20px;
         background: url(/img/eyecatch/front_eatin.jpg) center center no-repeat;
         background-size: cover;
         height: 642px;
+        width: 100%;
 
         @include tab {
             margin-top: 0;
         }
-    }
 
-    &__ttl {
-        grid-column: 1/2;
-        grid-row: 1/2;
-        color: $color__main-ttl;
-        position: relative;
-        @include font($size: 4.1rem, $weight: bold, $height: 1.4);
-
-        span {
-            position: absolute;
-            top: 60px;
-            display: inline-block;
-            width: 34px;
-            height: 3px;
-            background-color: $color__main-txt;
+        @include pc-l {
+            height: 1200px;
         }
     }
 
-    &__desc01 {
-        grid-column: 1/2;
-        grid-row: 2/3;
+    .c-content {
+        &__ttl {
+            h2 {
+                color: $color__main-ttl;
+                @include font($family: $roboto, $size: 4.1rem, $weight: bold, $height: 1.4);
+
+                @include tab {
+                    @include font($family: $roboto, $size: 4.4rem, $weight: bold, $height: 1.3);
+                }
+
+                @include pc-l {
+                    @include font($family: $roboto, $size: 8rem, $weight: bold, $height: 1.3);
+                }
+            }
+
+            span {
+                color: $color__main-ttl;
+                background-color: $color__main-txt;
+            }
+        }
+
+        &__topic01,
+        &__topic02 {
+            background-color: $subcolor__main-bg;
+            color: $subcolor__main-txt;
+        }
+
+        &__subTtl {
+            @include font($size: 2.2rem, $weight: bold);
+
+            @include pc-l {
+                @include font($size: 2.4rem, $weight: bold);
+            }
+        }
     }
 
-    &__desc02 {
-        grid-column: 1/2;
-        grid-row: 4/5;
+    &__desc {
+        @include font();
     }
 }

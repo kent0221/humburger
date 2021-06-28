@@ -1,5 +1,4 @@
 .c-card {
-    background-color: $AccColor__main-bg;
     margin-bottom: 20px;
 
     @include tab {
@@ -22,11 +21,13 @@
         @include tab {
             padding: 30px;
         }
+
+        @include pc-l {
+            padding: 50px 100px 60px 60px;
+        }
     }
 
     &__ttl {
-        @include font($size: 2rem, $weight: bold);
-        color: $color__main-ttl;
         margin-top: 10px;
         padding-right: 50px;
 
@@ -36,19 +37,27 @@
     }
 
     &__subttl {
-        @include font($weight: bold);
-        color: $color__main-ttl;
         margin-top: 24px;
+
+        @include pc-l {
+            margin: 50px 0 17px;
+        }
     }
 
     &__desc {
-        @include font();
-        color: $color__main-txt;
         margin-top: 10px;
+
+        @include pc-l {
+            margin-bottom: 60px;
+        }
     }
 
-    button {
+    .c-btn__card {
         display: block;
         margin: 40px auto;
+
+        @include pc-l {
+            margin: auto auto 0;
+        }
     }
 }
