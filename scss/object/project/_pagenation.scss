@@ -1,4 +1,6 @@
 .p-pagenation {
+    background-color: rgb(255, 253, 250);
+
     li,
     a {
         display: inline-block;
@@ -40,7 +42,10 @@
     }
 
     &__num {
-        padding: 0 10px;
+        width: 35px;
+        height: 35px;
+        padding: auto;
+        text-align: center;
         border: 1px solid $AccColor__main-txt;
 
         &.current {

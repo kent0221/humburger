@@ -1,5 +1,6 @@
 .l-main {
     grid-area: main;
+    background-color: rgb(255, 253, 250);
 
     &__hero {
         width: 100%;
@@ -43,7 +44,7 @@
     }
 
     &__pagenation {
-        margin: 40px 20px 30px;
+        margin: 0 20px 30px;
         display: flex;
         justify-content: space-between;
         align-items: center;
@@ -51,10 +52,12 @@
 
         @include tab {
             justify-content: center;
+            gap: 15px;
+            margin: 0 auto 30px;
         }
 
         @include pc-l {
-            gap: 15px;
+            margin: 0 auto 64px;
         }
     }
 }

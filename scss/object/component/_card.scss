@@ -6,6 +6,10 @@
         justify-content: space-between;
     }
 
+    @include pc-l {
+        margin-bottom: 30px;
+    }
+
     &__eyecatch {
         max-width: 100%;
 
@@ -16,23 +20,26 @@
     }
 
     &__wrap {
-        padding: 20px;
+        padding: 32px 17px 44px;
 
         @include tab {
-            padding: 30px;
+            padding: 30px 35px 40px;
         }
 
         @include pc-l {
-            padding: 50px 100px 60px 60px;
+            padding: 50px 64px 60px;
         }
     }
 
     &__ttl {
-        margin-top: 10px;
-        padding-right: 50px;
+        padding: 0 56px 40px 0;
 
         @include tab {
-            padding-right: 10px;
+            padding: 0 30px 45px 5px;
+        }
+
+        @include pc-l {
+            padding: 0 40px 60px 0;
         }
     }
 
@@ -40,7 +47,7 @@
         margin-top: 24px;
 
         @include pc-l {
-            margin: 50px 0 17px;
+            margin-top: 47px;
         }
     }
 
@@ -48,16 +55,16 @@
         margin-top: 10px;
 
         @include pc-l {
-            margin-bottom: 60px;
+            margin-top: 17px;
         }
     }
 
     .c-btn__card {
         display: block;
-        margin: 40px auto;
+        margin: auto 27% 0 auto;
 
-        @include pc-l {
-            margin: auto auto 0;
+        @include tab {
+            margin: auto 24.5% 0 auto;
         }
     }
 }

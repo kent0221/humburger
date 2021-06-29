@@ -1,0 +1,55 @@
+.p-article {
+    width: 100%;
+    height: auto;
+
+    padding: 20px 20px 60px;
+
+    @include tab {
+        padding: 60 60 70px;
+    }
+
+    @include pc-l {
+        padding: 60px 100px 180px;
+    }
+
+    &__ttl {
+        color: $subcolor__main-ttl;
+        margin: 10px 0 30px;
+        @include font($size: 2.8rem, $weight: bold);
+
+        @include tab {
+            margin-top: 0;
+            margin-bottom: 60px;
+            @include font($size: 3.6rem, $weight: bold);
+        }
+    }
+
+    &__desc {
+        margin-bottom: 20px;
+        height: auto;
+        color: $subcolor__main-txt;
+        @include font();
+
+        @include tab {
+            margin-bottom: 60px;
+        }
+    }
+
+    &__subttl {
+        margin: 34px 0 30px;
+        @include font($size: 2.8rem, $weight: bold);
+
+        @include tab {
+            margin-bottom: 60px;
+        }
+    }
+
+    .c-ttl__sub {
+        @include font($size: 2rem, $weight: bold);
+        color: $subcolor__main-ttl;
+
+        @include tab {
+            margin-bottom: 60px;
+        }
+    }
+}

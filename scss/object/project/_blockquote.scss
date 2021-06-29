@@ -2,8 +2,20 @@
     background-color: rgb(245, 245, 245);
     margin-bottom: 30px;
 
+    @include tab {
+        margin-bottom: 60px;
+    }
+
     &__wrap {
         padding: 30px 20px;
+
+        @include tab {
+            padding: 50px 56px 60px 50px;
+        }
+
+        @include pc-l {
+            padding: 50px 60px 50px 50px;
+        }
     }
 
     p,
@@ -14,6 +26,10 @@
 
     &__txt {
         margin-bottom: 30px;
+
+        @include tab {
+            margin-bottom: 60px;
+        }
     }
 
     &__link a {

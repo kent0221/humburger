@@ -14,8 +14,6 @@
     }
 
     &__sub {
-        @include font($size: 2rem, $weight: bold);
-        color: $subcolor__main-ttl;
         margin-bottom: 30px;
     }
 }
