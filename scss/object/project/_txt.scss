@@ -1,5 +1,4 @@
 .p-txt {
-    margin-bottom: 70px;
     @include font($weight: bold);
     color: $subcolor__main-txt;
 }

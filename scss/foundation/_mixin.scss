@@ -1,16 +1,23 @@
 /* -------------------------------------
 レスポンシブ(モバイルファースト)
-スマホ：~649px
+スマホ：~ 469px
+mob-l：470px~649px
 タブレット：650px ~ 959px
 PC：1000px ~1299px
 PC-m：1300px ~1499px
 PC-l：1500px ~
 ---------------------------------------- */
+$mob-l: 470px;
 $tab: 650px;
 $pc: 1000px;
 $pc-m: 1300px;
 $pc-l: 1500px;
 
+@mixin mob-l {
+    @media (min-width: ($mob-l)) {
+        @content;
+    }
+}
 @mixin tab {
     @media (min-width: ($tab)) {
         @content;

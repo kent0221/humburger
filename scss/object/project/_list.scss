@@ -1,5 +1,10 @@
 .p-list {
-    margin: 30px 0 30px 20px;
+    margin-bottom: 30px;
+
+    @include tab {
+        margin-bottom: 60px;
+        margin-left: 50px;
+    }
 
     li {
         color: $subcolor__main-txt;
@@ -8,9 +13,6 @@
 
     &__ol {
         margin-bottom: 60px;
-        li {
-            list-style-type: decimal;
-        }
     }
 
     &__ol-child,

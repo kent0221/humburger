@@ -1,8 +1,25 @@
 .p-code {
     background-color: rgb(245, 245, 245);
+    margin-bottom: 30px;
+
+    @include tab {
+        margin-bottom: 60px;
+    }
+
+    @include pc-l {
+        margin-bottom: 50px;
+    }
 
     &__wrap {
-        padding: 50px 0 50px 50px;
+        padding: 50px 59px 50px 50px;
+
+        @include tab {
+            padding-right: 69px;
+        }
+
+        @include pc-l {
+            padding-right: 60px;
+        }
     }
     code {
         color: $subcolor__main-txt;
