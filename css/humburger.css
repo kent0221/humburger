@@ -361,7 +361,7 @@ layout
 .l-grid {
   display: grid;
   grid-gap: 0;
-  grid-template-columns: 100vw 330px;
+  grid-template-columns: 100% 330px;
   grid-template-rows: auto auto 150px;
   grid-template-areas: "header sidebar" "main sidebar" "footer sidebar";
   overflow: hidden;
@@ -371,13 +371,13 @@ layout
   position: absolute;
   z-index: 10;
   display: block;
-  width: 100vw;
+  width: 100%;
   height: 200vw;
   background-color: rgba(0, 0, 0, 0.4);
 }
 @media (min-width: 1000px) {
   .l-grid {
-    width: 100vw;
+    width: 100%;
     grid-template-columns: auto 370px;
     grid-template-areas: "header sidebar" "main sidebar" "footer footer";
     overflow: visible;
@@ -429,6 +429,8 @@ layout
 
 .l-main {
   grid-area: main;
+}
+.l-main__wrap {
   background-color: #fffdfa;
 }
 .l-main__hero {
@@ -475,7 +477,8 @@ layout
   }
 }
 .l-main__pagenation {
-  margin: 0 20px 30px;
+  margin: 0 20px;
+  padding-bottom: 30px;
   display: flex;
   justify-content: space-between;
   align-items: center;
@@ -485,12 +488,13 @@ layout
   .l-main__pagenation {
     justify-content: center;
     gap: 15px;
-    margin: 0 auto 30px;
+    margin: 0 auto;
+    padding-bottom: 30px;
   }
 }
 @media (min-width: 1500px) {
   .l-main__pagenation {
-    margin: 0 auto 64px;
+    padding-bottom: 64px;
   }
 }
 
