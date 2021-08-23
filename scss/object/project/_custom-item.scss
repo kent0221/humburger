@@ -1,0 +1,39 @@
+.p-custom-item {
+    width: 100%;
+    height: auto;
+
+    padding: 20px 20px 40px;
+
+    @include tab {
+        padding: 60px 60px 40px;
+    }
+
+    @include pc-l {
+        padding: 60px 100px 40px;
+    }
+
+    &__thumb {
+        display: block;
+        margin: 0 auto;
+        width: 100%;
+        object-fit: cover;
+        height: 50vh;
+    }
+
+    &__info {
+        padding-top: 4rem;
+    }
+
+    &__ttl {
+        @include font($family: $roboto, $size: 4rem, $weight: bold);
+        color: $subcolor__main-ttl;
+    }
+
+    &__desc {
+        @include font($family: $roboto, $size: 3rem);
+        color: $subcolor__main-txt;
+
+        padding-top: 20px;
+        margin-bottom: 20px;
+    }
+}

@@ -8,7 +8,21 @@
     text-align: center;
 
     &__info {
-        @include font($size: 2rem);
+        display: flex;
+        justify-content: center;
+
+        li {
+            border-right: 2px solid;
+            &:last-child {
+                border-right: none;
+            }
+        }
+
+        a {
+            padding: 0 1.6rem;
+            color: $color__footer-txt;
+            @include font($size: 2rem);
+        }
     }
 
     &__copyright {

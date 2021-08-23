@@ -34,6 +34,14 @@
         @include pc {
             display: none;
         }
+
+        &.wordpress {
+            top: 71px;
+
+            @include adminbar {
+                top: 57px;
+            }
+        }
     }
 
     &__gmenu {

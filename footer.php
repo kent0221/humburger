@@ -1,17 +1,18 @@
-<fotter class="l-footer">
+<footer class="l-footer">
+    <?php wp_nav_menu(
+    array(
 
-    <?php wp_nav_menu(); ?>
-
-    <p class="l-footer__copyright"><small>Copyright: RaiseTech</small></p>
-</fotter>
+            'menu_class'=>'l-footer__info',
+            'container'=>false,
+            'theme_location'=>'footer_info'
+        )
+); ?>
+    <!-- </nav> -->
+    <p class="l-footer__copyright"><small>&copy; <?php bloginfo('name'); ?> 2021</small></p>
+</footer>
+<?php wp_footer(); ?>
 <!-- /.l-footer -->
 </div>
-<!-- /.l-grid -->
-
-<!-- ----JavaScript---- -->
-<!-- <script src="./js/jquery.min.js"></script> -->
-<!-- ----自作JavaScript---- -->
-<!-- <script src="./js/script.js"></script> -->
 </body>
 
 </html>

@@ -1,47 +1,15 @@
-.p-pagenation {
+%pagenation {
     background-color: rgb(255, 253, 250);
 
     li,
-    a {
+    a,
+    span {
         display: inline-block;
         color: $AccColor__main-txt;
         @include font();
     }
 
-    &__prev::before {
-        content: "<<";
-        padding-right: 10px;
-        font-size: 1.6rem;
-    }
-
-    &__next::after {
-        content: ">>";
-        padding-left: 10px;
-        font-size: 1.6rem;
-    }
-
-    &.mobile {
-        @include tab {
-            display: none;
-        }
-    }
-
-    &.tab {
-        display: none;
-        @include tab {
-            display: flex;
-        }
-
-        li,
-        a {
-            @include font($family: $roboto, $weight: bold, $height: 2);
-        }
-    }
-    &__count {
-        padding-right: 7px;
-    }
-
-    &__num {
+    .page-numbers {
         width: 35px;
         height: 35px;
         padding: auto;
@@ -52,5 +20,54 @@
             background-color: $AccColor__main-bg;
             color: $color__main-txt;
         }
+        &.prev,
+        &.next {
+            border: none;
+        }
+    }
+}
+
+.mobile .p-pagenation {
+    @extend %pagenation;
+    display: flex;
+    justify-content: space-between;
+
+    & > a {
+        display: inline-block;
+        color: $AccColor__main-txt;
+        @include font();
+    }
+
+    @include tab {
+        display: none;
+    }
+}
+
+.tab .p-pagenation .nav-links > .page-numbers {
+    @extend %pagenation;
+
+    display: none;
+    @include tab {
+        display: flex;
+        align-items: center;
+        gap: 7px;
+    }
+
+    li,
+    a,
+    span {
+        @include font($family: $roboto, $weight: bold, $height: 2);
+    }
+}
+
+.p-pagenation__count {
+    padding-right: 7px;
+    display: inline-block;
+    color: $AccColor__main-txt;
+    @include font();
+    display: none;
+
+    @include tab {
+        display: block;
     }
 }

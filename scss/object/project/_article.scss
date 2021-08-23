@@ -12,7 +12,7 @@
         padding: 60px 100px 179px;
     }
 
-    &__ttl {
+    h2 {
         color: $subcolor__main-ttl;
         margin: 10px 0 30px;
         @include font($size: 2.8rem, $weight: bold);
@@ -24,7 +24,7 @@
         }
     }
 
-    &__desc {
+    p {
         margin-bottom: 20px;
         height: auto;
         color: $subcolor__main-txt;
@@ -35,7 +35,7 @@
         }
     }
 
-    &__subttl {
+    h3 {
         margin: 34px 0 30px;
         @include font($size: 2.8rem, $weight: bold);
 
@@ -44,12 +44,72 @@
         }
     }
 
-    .c-ttl__sub {
+    h4,
+    h5,
+    h6 {
         @include font($size: 2rem, $weight: bold);
         color: $subcolor__main-ttl;
 
         @include tab {
             margin-bottom: 60px;
         }
+    }
+
+    blockquote {
+        @extend %blockquote;
+    }
+
+    & > .wp-block-image {
+        @extend %cover;
+    }
+
+    & > .wp-block-columns {
+        @extend %flex;
+    }
+
+    .wp-block-group__inner-container {
+        max-width: 100%;
+        display: grid;
+        grid-template-columns: 1fr;
+        grid-template-rows: repeat(9, auto);
+        grid-gap: 20px;
+        margin-bottom: 30px;
+
+        @include tab {
+            grid-template-columns: repeat(2, 1fr);
+            grid-template-rows: repeat(5, auto);
+            row-gap: 20px;
+            column-gap: 16px;
+            margin-bottom: 60px;
+        }
+
+        @include pc {
+            grid-template-columns: repeat(3, 1fr);
+            grid-template-rows: repeat(3 auto);
+            grid-gap: 20px;
+            margin-bottom: 53px;
+        }
+
+        img {
+            max-width: 100%;
+            object-fit: cover;
+        }
+    }
+
+    ol,
+    ul {
+        @extend %list;
+    }
+
+    pre {
+        @extend %code;
+    }
+
+    table {
+        @extend %table;
+    }
+
+    .wp-block-button {
+        @extend %btn;
     }
 }

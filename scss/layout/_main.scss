@@ -3,6 +3,10 @@
 
     &__wrap {
         background-color: rgb(255, 253, 250);
+
+        @include pc {
+            min-height: calc(1250px - 230px);
+        }
     }
 
     &__hero {
@@ -48,12 +52,11 @@
     &__pagenation {
         margin: 0 20px;
         padding-bottom: 30px;
-        display: flex;
-        justify-content: space-between;
-        align-items: center;
         gap: 7px;
 
         @include tab {
+            display: flex;
+            align-items: center;
             justify-content: center;
             gap: 15px;
             margin: 0 auto;
@@ -63,5 +66,10 @@
         @include pc-l {
             padding-bottom: 64px;
         }
+    }
+
+    &__noresult {
+        padding: 30px 0;
+        @include font($size: 2rem);
     }
 }

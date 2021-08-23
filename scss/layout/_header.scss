@@ -24,7 +24,7 @@
         }
     }
 
-    button {
+    .c-btn__menu {
         position: absolute;
         top: 16px;
         right: 14px;
@@ -35,6 +35,14 @@
 
         @include pc {
             display: none;
+        }
+
+        &.wordpress {
+            top: 62px;
+
+            @include adminbar {
+                top: 48px;
+            }
         }
     }
 }

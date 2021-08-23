@@ -1,12 +1,14 @@
 /*
-Theme Name:Humburger site
+Theme Name:humburger
 Description:ハンバーガーサイト: Raisetech最終課題
 Version:1.0.0
-Theme URI:      //テーマの URL
+Theme URI:example.com
 Author:Ken
-Author URI:     //作った人の URL
-Tags:           //テーマのタイプ
-License:        //ライセンス（WordPressのテーマやプラグインを公開して配布する場合、ライセンスはGPLになります。）
-License URI:    //ライセンスの URL
-Text Domain:    //テキストドメイン（翻訳させたい箇所を指示する際に使います。テーマディレクトリ名を入れます。）
+Author URI:
+Tags:
+License:
+License URI:
+Text Domain:humburger
+Requires PHP: 7.3.5 
+Tested up to: 5.8
 */

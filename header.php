@@ -14,14 +14,15 @@
     <?php wp_head(); ?>
 </head>
 
-<body>
+<body <?php body_class(); ?>>
+    <?php wp_body_open(); ?>
     <div class="l-grid">
         <header class="l-header">
             <button class="l-header__btn c-btn__menu">Menu</button>
             <h1 class="l-header__ttl"><a href="<?php echo esc_url(home_url('/')); ?>"
                     class="p-ttl"><?php bloginfo('name'); ?></a></h1>
 
-            <!-- ----検索フォームのテンプレート化 -> searchform.php---- -->
+            <!-- ----検索フォームのテンプレート化 -->
             <?php get_search_form(); ?>
 
         </header>

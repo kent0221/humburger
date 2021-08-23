@@ -1,0 +1,10 @@
+.p-error {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: rgb(255, 253, 250);
+
+    &--ttl {
+        @include font($size: 4rem);
+    }
+}

@@ -1,3 +1,24 @@
+%code {
+    background-color: rgb(245, 245, 245);
+    margin-bottom: 30px;
+    padding: 50px 59px 50px 50px;
+
+    @include tab {
+        margin-bottom: 60px;
+        padding-right: 69px;
+    }
+
+    @include pc-l {
+        margin-bottom: 50px;
+        padding-right: 60px;
+    }
+
+    code {
+        color: $subcolor__main-txt;
+        @include font();
+    }
+}
+
 .p-code {
     background-color: rgb(245, 245, 245);
     margin-bottom: 30px;

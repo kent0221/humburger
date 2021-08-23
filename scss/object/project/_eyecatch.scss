@@ -1,3 +1,78 @@
+//wp-block-imageの時：cover
+%cover {
+    margin-bottom: 30px;
+    max-width: 100%;
+    width: 100%;
+    @include tab {
+        margin-bottom: 60px;
+    }
+
+    img {
+        width: 100%;
+        height: 14.4vh;
+        object-fit: cover;
+        object-position: bottom;
+
+        @include mob-l {
+            height: 22vh;
+        }
+
+        @include tab {
+            height: 30.6vh;
+        }
+
+        @include pc-m {
+            height: 40vh;
+        }
+
+        @include pc-l {
+            height: 56.9vh;
+        }
+    }
+}
+
+//wp-block-columnの時：cover
+
+%flex {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    height: 160px;
+    // overflow: hidden;
+    margin-bottom: 45px;
+    gap: 5%;
+
+    @include tab {
+        height: 373px;
+        margin-bottom: 117px;
+    }
+
+    @include pc-l {
+        height: 358px;
+        margin-bottom: 60px;
+    }
+
+    figure > img {
+        width: 100%;
+        object-fit: cover;
+    }
+    p {
+        color: $subcolor__main-txt;
+        @include font();
+    }
+
+    .wp-block-image {
+        max-width: 100%;
+        object-fit: contain;
+        margin: 0 auto;
+        display: block; //中央揃えするため
+
+        @include tab {
+            width: 581px;
+        }
+    }
+}
+
 .p-eyecatch {
     margin-bottom: 30px;
 

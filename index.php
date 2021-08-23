@@ -11,7 +11,8 @@
     <div class="l-main__wrap">
 
         <section class="l-main__contents-front">
-            <a href="/page.html" class="p-content p-content--takeout c-content">
+            <a href="<?php echo esc_url(home_url('/item_cat/takeout')); ?>"
+                class="p-content p-content--takeout c-content">
                 <div class="c-content__ttl">
                     <h2>Take Out</h2>
                     <span></span>
@@ -29,7 +30,7 @@
                     </p>
                 </div>
             </a>
-            <a href="page.html" class="p-content p-content--eatin c-content">
+            <a href="<?php echo esc_url(home_url('/item_cat/eatin')); ?>" class="p-content p-content--eatin c-content">
                 <div class="c-content__ttl">
                     <h2>Eat In</h2>
                     <span></span>

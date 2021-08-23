@@ -66,7 +66,7 @@
             }
         }
 
-        &__desc {
+        p {
             @include font();
             color: $color__main-txt;
         }

@@ -29,4 +29,8 @@
 
         overflow: visible;
     }
+
+    @include pc-m {
+        grid-template-rows: 218px auto 150px;
+    }
 }

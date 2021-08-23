@@ -1,21 +1,31 @@
 .c-card {
     margin-bottom: 20px;
+    width: 100%;
+    height: 580px;
+    overflow: hidden;
 
     @include tab {
         display: flex;
         justify-content: space-between;
+        // height: 30%;
+        height: 320px;
     }
 
     @include pc-l {
         margin-bottom: 30px;
+        height: 43%;
+        height: 480px;
     }
 
     &__eyecatch {
         max-width: 100%;
+        height: 47%;
+        object-fit: cover;
 
         @include tab {
             max-width: 50%;
-            object-fit: cover;
+            height: auto;
+            width: 50%;
         }
     }
 
@@ -23,6 +33,8 @@
         padding: 32px 17px 44px;
 
         @include tab {
+            width: 50%;
+            max-width: 50%;
             padding: 30px 35px 40px;
         }
 
@@ -36,35 +48,33 @@
 
         @include tab {
             padding: 0 30px 45px 5px;
+            max-height: 205px;
+            overflow-y: hidden;
         }
 
         @include pc-l {
+            max-height: 270px;
+            height: 270px;
             padding: 0 40px 60px 0;
         }
-    }
 
-    &__subttl {
-        margin-top: 24px;
+        p {
+            margin-top: 10px;
 
-        @include pc-l {
-            margin-top: 47px;
-        }
-    }
+            @include tab {
+                max-height: 120px;
+                overflow-y: hidden;
+            }
 
-    &__desc {
-        margin-top: 10px;
-
-        @include pc-l {
-            margin-top: 17px;
+            @include pc-l {
+                max-height: 170px;
+                margin-top: 17px;
+            }
         }
     }
 
     .c-btn__card {
         display: block;
-        margin: auto 27% 0 auto;
-
-        @include tab {
-            margin: auto 24.5% 0 auto;
-        }
+        margin: 0 auto;
     }
 }

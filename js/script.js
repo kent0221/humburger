@@ -17,5 +17,17 @@ $(function () {
             $('.l-sidebar').toggleClass('is-open');
         }, 500);
     });
-
 });
+
+//adminbarが存在するときMenu・バツボタンにクラスを追加
+$(function () {
+    if ($('#wpadminbar').length) {
+        $('.c-btn__menu').addClass('wordpress');
+        $('.c-btn__close').addClass('wordpress');
+    } else {
+        $('.c-btn__menu').removeClass('wordpress');
+        $('.c-btn__close').removeClass('wordpress');
+
+    }
+});
+

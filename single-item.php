@@ -6,22 +6,30 @@
 if (have_posts()):
     while (have_posts()):the_post();
 ?>
+    <!-- カスタムフィールドの値取得 -->
+    <?php
+$price = get_post_meta(get_the_ID(), '価格', true);
+$allergies = get_post_meta(get_the_ID(), 'アレルギー', true);
+ ?>
+
+
     <div id="post-<?php the_ID(); ?>" <?php post_class(); ?>>
-        <section class="l-main__hero p-hero p-hero--single c-mainvisual__single">
-            <div class="c-ttl">
-                <h1 class="c-ttl__hero"><?php the_title(); ?></h1>
-            </div>
-        </section>
 
         <div class="l-main__wrap">
+            <section class="p-custom-item">
+                <?php the_post_thumbnail('full', array('class'=>'p-custom-item__thumb')); ?>
+                <div class="p-custom-item__info">
+                    <h1 class="p-custom-item__ttl"><?php the_title(); ?></h1>
+                    <p class="p-custom-item__desc">価格：<?php echo $price; ?>円</p>
+                    <p class="p-custom-item__desc">アレルギー：<?php echo $allergies; ?></p>
+                </div>
+            </section>
 
             <section class="l-main__contents p-article">
 
                 <?php the_content() ;?>
                 <?php wp_link_pages(); ?>
-
             </section>
-
             <div class="p-comments--wrap">
                 <?php comments_template(); ?>
 

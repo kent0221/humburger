@@ -1,3 +1,22 @@
+%list {
+    margin-bottom: 30px;
+
+    @include tab {
+        margin-bottom: 60px;
+        margin-left: 50px;
+    }
+
+    li {
+        color: $subcolor__main-txt;
+        @include font();
+    }
+
+    ol,
+    ul {
+        margin: 20px 0 20px 18px;
+    }
+}
+
 .p-list {
     margin-bottom: 30px;
 
